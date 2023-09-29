@@ -13,13 +13,31 @@
 		8D4566D82A9D420700AADA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4566D72A9D420700AADA8B /* AppDelegate.swift */; };
 		8D4566DA2A9D420700AADA8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4566D92A9D420700AADA8B /* SceneDelegate.swift */; };
 		8D4566E12A9D420900AADA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D4566E02A9D420900AADA8B /* Assets.xcassets */; };
+		8DB76CF22AC1E69A00B5115E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB76CF02AC1E69A00B5115E /* DetailViewController.swift */; };
+		8DB76CF32AC1E69A00B5115E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB76CF12AC1E69A00B5115E /* DetailViewController.xib */; };
+		8DB76CFA2AC1F27D00B5115E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB76CF82AC1F27D00B5115E /* TableViewCell.swift */; };
+		8DB76CFB2AC1F27D00B5115E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB76CF92AC1F27D00B5115E /* TableViewCell.xib */; };
+		8DB76CFD2AC1FF4A00B5115E /* UIImage+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB76CFC2AC1FF4A00B5115E /* UIImage+Remote.swift */; };
+		8DB76CFF2AC3411300B5115E /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB76CFE2AC3411200B5115E /* LocalDataModel.swift */; };
 		8DC0D79A2AB8519500C01A8D /* ListViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0D7982AB8519500C01A8D /* ListViewViewController.swift */; };
 		8DC0D79B2AB8519500C01A8D /* ListViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC0D7992AB8519500C01A8D /* ListViewViewController.xib */; };
 		8DC0D79E2AB8C98B00C01A8D /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0D79D2AB8C98B00C01A8D /* NetworkModel.swift */; };
 		8DC0D7A02AB8DE4800C01A8D /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0D79F2AB8DE4800C01A8D /* Hero.swift */; };
 		8DC0D7A22AB8EFBB00C01A8D /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0D7A12AB8EFBB00C01A8D /* Transformation.swift */; };
 		8DC0D7A42ABA0F5600C01A8D /* GetTransformationBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0D7A32ABA0F5600C01A8D /* GetTransformationBody.swift */; };
+		8DC0D7AC2ABA33CE00C01A8D /* DBPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0D7AB2ABA33CE00C01A8D /* DBPracticeTests.swift */; };
+		8DC0D7B32ABA344700C01A8D /* NetworkModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0D7B22ABA344700C01A8D /* NetworkModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8DC0D7AD2ABA33CE00C01A8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D4566CC2A9D420700AADA8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D4566D32A9D420700AADA8B;
+			remoteInfo = DBPractice;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8D438F0B2AAF854B00EDB95C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,16 +48,32 @@
 		8D4566D92A9D420700AADA8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8D4566E02A9D420900AADA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D4566E52A9D420900AADA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB76CF02AC1E69A00B5115E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8DB76CF12AC1E69A00B5115E /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		8DB76CF82AC1F27D00B5115E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		8DB76CF92AC1F27D00B5115E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		8DB76CFC2AC1FF4A00B5115E /* UIImage+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Remote.swift"; sourceTree = "<group>"; };
+		8DB76CFE2AC3411200B5115E /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
 		8DC0D7982AB8519500C01A8D /* ListViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewViewController.swift; sourceTree = "<group>"; };
 		8DC0D7992AB8519500C01A8D /* ListViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewViewController.xib; sourceTree = "<group>"; };
 		8DC0D79D2AB8C98B00C01A8D /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		8DC0D79F2AB8DE4800C01A8D /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		8DC0D7A12AB8EFBB00C01A8D /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
 		8DC0D7A32ABA0F5600C01A8D /* GetTransformationBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransformationBody.swift; sourceTree = "<group>"; };
+		8DC0D7A92ABA33CE00C01A8D /* DBPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC0D7AB2ABA33CE00C01A8D /* DBPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPracticeTests.swift; sourceTree = "<group>"; };
+		8DC0D7B22ABA344700C01A8D /* NetworkModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8D4566D12A9D420700AADA8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC0D7A62ABA33CE00C01A8D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,6 +90,8 @@
 				8DC0D79F2AB8DE4800C01A8D /* Hero.swift */,
 				8DC0D7A12AB8EFBB00C01A8D /* Transformation.swift */,
 				8DC0D7A32ABA0F5600C01A8D /* GetTransformationBody.swift */,
+				8DB76CFC2AC1FF4A00B5115E /* UIImage+Remote.swift */,
+				8DB76CFE2AC3411200B5115E /* LocalDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -63,6 +99,8 @@
 		8D438F0E2AAF863400EDB95C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8DB76CF92AC1F27D00B5115E /* TableViewCell.xib */,
+				8DB76CF12AC1E69A00B5115E /* DetailViewController.xib */,
 				8D438F112AAF867700EDB95C /* LoginViewController.xib */,
 				8DC0D7992AB8519500C01A8D /* ListViewViewController.xib */,
 			);
@@ -74,6 +112,8 @@
 			children = (
 				8DC0D7982AB8519500C01A8D /* ListViewViewController.swift */,
 				8D438F102AAF867700EDB95C /* LoginViewController.swift */,
+				8DB76CF02AC1E69A00B5115E /* DetailViewController.swift */,
+				8DB76CF82AC1F27D00B5115E /* TableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -82,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8D4566D62A9D420700AADA8B /* DBPractice */,
+				8DC0D7AA2ABA33CE00C01A8D /* DBPracticeTests */,
 				8D4566D52A9D420700AADA8B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8D4566D42A9D420700AADA8B /* DBPractice.app */,
+				8DC0D7A92ABA33CE00C01A8D /* DBPracticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +149,15 @@
 				8D438F0B2AAF854B00EDB95C /* LaunchScreen.storyboard */,
 			);
 			path = DBPractice;
+			sourceTree = "<group>";
+		};
+		8DC0D7AA2ABA33CE00C01A8D /* DBPracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DC0D7AB2ABA33CE00C01A8D /* DBPracticeTests.swift */,
+				8DC0D7B22ABA344700C01A8D /* NetworkModelTests.swift */,
+			);
+			path = DBPracticeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +180,24 @@
 			productReference = 8D4566D42A9D420700AADA8B /* DBPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8DC0D7A82ABA33CE00C01A8D /* DBPracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DC0D7AF2ABA33CE00C01A8D /* Build configuration list for PBXNativeTarget "DBPracticeTests" */;
+			buildPhases = (
+				8DC0D7A52ABA33CE00C01A8D /* Sources */,
+				8DC0D7A62ABA33CE00C01A8D /* Frameworks */,
+				8DC0D7A72ABA33CE00C01A8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DC0D7AE2ABA33CE00C01A8D /* PBXTargetDependency */,
+			);
+			name = DBPracticeTests;
+			productName = DBPracticeTests;
+			productReference = 8DC0D7A92ABA33CE00C01A8D /* DBPracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -141,6 +210,10 @@
 				TargetAttributes = {
 					8D4566D32A9D420700AADA8B = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					8DC0D7A82ABA33CE00C01A8D = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 8D4566D32A9D420700AADA8B;
 					};
 				};
 			};
@@ -158,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				8D4566D32A9D420700AADA8B /* DBPractice */,
+				8DC0D7A82ABA33CE00C01A8D /* DBPracticeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -168,9 +242,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D4566E12A9D420900AADA8B /* Assets.xcassets in Resources */,
+				8DB76CFB2AC1F27D00B5115E /* TableViewCell.xib in Resources */,
 				8DC0D79B2AB8519500C01A8D /* ListViewViewController.xib in Resources */,
+				8DB76CF32AC1E69A00B5115E /* DetailViewController.xib in Resources */,
 				8D438F0C2AAF854B00EDB95C /* LaunchScreen.storyboard in Resources */,
 				8D438F132AAF867700EDB95C /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC0D7A72ABA33CE00C01A8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,10 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB76CF22AC1E69A00B5115E /* DetailViewController.swift in Sources */,
 				8DC0D79E2AB8C98B00C01A8D /* NetworkModel.swift in Sources */,
 				8D438F122AAF867700EDB95C /* LoginViewController.swift in Sources */,
 				8D4566D82A9D420700AADA8B /* AppDelegate.swift in Sources */,
 				8DC0D7A42ABA0F5600C01A8D /* GetTransformationBody.swift in Sources */,
+				8DB76CFF2AC3411300B5115E /* LocalDataModel.swift in Sources */,
+				8DB76CFA2AC1F27D00B5115E /* TableViewCell.swift in Sources */,
+				8DB76CFD2AC1FF4A00B5115E /* UIImage+Remote.swift in Sources */,
 				8DC0D7A02AB8DE4800C01A8D /* Hero.swift in Sources */,
 				8D4566DA2A9D420700AADA8B /* SceneDelegate.swift in Sources */,
 				8DC0D7A22AB8EFBB00C01A8D /* Transformation.swift in Sources */,
@@ -192,7 +279,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DC0D7A52ABA33CE00C01A8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC0D7B32ABA344700C01A8D /* NetworkModelTests.swift in Sources */,
+				8DC0D7AC2ABA33CE00C01A8D /* DBPracticeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DC0D7AE2ABA33CE00C01A8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D4566D32A9D420700AADA8B /* DBPractice */;
+			targetProxy = 8DC0D7AD2ABA33CE00C01A8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8D4566E62A9D420900AADA8B /* Debug */ = {
@@ -363,6 +467,42 @@
 			};
 			name = Release;
 		};
+		8DC0D7B02ABA33CE00C01A8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TJMJV7ZV7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Marcos.DBPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DBPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DBPractice";
+			};
+			name = Debug;
+		};
+		8DC0D7B12ABA33CE00C01A8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TJMJV7ZV7T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Marcos.DBPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DBPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DBPractice";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -380,6 +520,15 @@
 			buildConfigurations = (
 				8D4566E92A9D420900AADA8B /* Debug */,
 				8D4566EA2A9D420900AADA8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DC0D7AF2ABA33CE00C01A8D /* Build configuration list for PBXNativeTarget "DBPracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DC0D7B02ABA33CE00C01A8D /* Debug */,
+				8DC0D7B12ABA33CE00C01A8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

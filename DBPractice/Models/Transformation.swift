@@ -9,7 +9,7 @@ import Foundation
 
 
 //Dejamos decodable ya que no vamos a necesitar que se pueda codificar
-struct Transformation: Decodable {
+struct Transformation: Decodable, TableViewRepresentable{
     
     let id: String
     let name: String

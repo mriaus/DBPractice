@@ -8,7 +8,20 @@
 import Foundation
 final class NetworkModel {
     
-    private var token : String?
+    private var token : String? {
+        get{
+            if let token = LocalDataModel.getToken(){
+                return token
+            }
+            return nil
+        }
+        set{
+            if let token = newValue {
+                LocalDataModel.saveToken(token: token)
+            }
+            
+        }
+    }
     private var baseComponents: URLComponents {
         var components = URLComponents()
         components.scheme = "https"
@@ -26,12 +39,12 @@ final class NetworkModel {
         case encodingFailed
     }
     
-    func login(user: String, password: String, completion:@escaping (String?, NetworkError?) -> Void){
+    func login(user: String, password: String, completion:@escaping (Result<String, NetworkError>) -> Void){
         var components = baseComponents
         components.path = "/api/auth/login"
         
         guard let url = components.url else {
-            completion(nil, .malformedUrl)
+            completion(.failure(.malformedUrl))
             return
         }
         
@@ -40,7 +53,7 @@ final class NetworkModel {
         
         
         guard let loginData = loginString.data(using: .utf8) else {
-            completion(nil, .decodingFailed)
+            completion(.failure(.decodingFailed))
             return
         }
          //Transforma el string a base 64
@@ -56,43 +69,43 @@ final class NetworkModel {
         let task = URLSession.shared.dataTask(with: request) {[weak self] data, response, error in
             guard error == nil else{
                 //Tal vez cambiarlo
-                completion(nil, .unknown)
+                completion(.failure(.unknown))
                 return
             }
             
             guard let data else {
-                completion(nil, .noData)
+                completion(.failure(.noData))
                 return
             }
             let urlResponse = response as? HTTPURLResponse
             guard urlResponse?.statusCode == 200 else {
-                completion(nil, .StatusCode(code: urlResponse?.statusCode))
+                completion(.failure(.StatusCode(code: urlResponse?.statusCode)))
                 return
             }
             
             guard let  token = String(data: data, encoding: .utf8) else {
-                completion(nil, .decodingFailed)
+                completion(.failure(.noToken))
                 return
             }
             
-            completion(token, nil)
+            completion(.success(token))
             self?.token = token
         }
         task.resume()
     }
     
-    func getHeroes(completion: @escaping ([Hero], NetworkError?) -> Void){
+    func getHeroes(completion: @escaping (Result<[Hero], NetworkError>) -> Void){
         
         var components = baseComponents
         components.path = "/api/heros/all"
         
         guard let url = components.url else {
-            completion([], .malformedUrl)
+            completion(.failure(.malformedUrl))
             return
         }
         
         guard let token else {
-            completion([], .noToken)
+            completion(.failure(.noToken))
             return
         }
         
@@ -107,56 +120,63 @@ final class NetworkModel {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             guard error == nil else {
-                completion([], .unknown)
+                completion(.failure(.unknown))
                 return
             }
             
             guard let data else {
-                completion([], .noData)
+                completion(.failure(.noData))
                 return
             }
             
             guard let heroes = try? JSONDecoder().decode([Hero].self, from: data) else{
-                completion([], .decodingFailed)
+                completion(.failure(.decodingFailed))
                 return
             }
             
-            completion(heroes,nil)
+            completion(.success(heroes))
             
         }
         task.resume()
     }
     
     // Mark: Get transformations
-    func getTransformations(for hero: Hero, completion: @escaping ((Result<[Transformation], NetworkError>) -> Void) ){
+    func getTransformations(for hero: TableViewRepresentable, completion: @escaping ((Result<[Transformation], NetworkError>) -> Void) ){
         
         var components = baseComponents
-        components.path = "/api/heros/transformations"
+        components.path = "/api/heros/tranformations"
         //Comprobamos si components tiene url 
         guard let url = components.url else{
             completion(.failure(.malformedUrl))
             return
         }
         
-        let body = GetTransformationBody(id: hero.id)
-        
-        //En este caso solicita todos los heroes se puede hacer refactor para obtener un solo heroe
-
-        
-        guard let encodedBody = try? JSONEncoder().encode(body) else{
-            completion(.failure(.encodingFailed))
+        guard let token else {
+            completion(.failure(.noToken))
             return
         }
+        
+        
+//        let body = GetTransformationBody(id: hero.id)
+        
+
+        
+//        guard let encodedBody = try? JSONEncoder().encode(body) else{
+//            completion(.failure(.encodingFailed))
+//            return
+//        }
+        
+        var urlComponents = URLComponents()
+        urlComponents.queryItems = [URLQueryItem(name:"id", value: hero.id)]
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("Bearer \(String(describing: token))", forHTTPHeaderField: "Authorization")
-        request.httpBody = encodedBody
+        request.httpBody = urlComponents.query?.data(using: .utf8)
         
         
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
             guard error == nil else {
                 completion(.failure(.unknown))
                 return

@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewViewController" customModule="DBPractice" customModuleProvider="target">
             <connections>
+                <outlet property="TableView" destination="UuI-0h-MGe" id="4kr-yx-NEv"/>
+                <outlet property="tableView" destination="UuI-0h-MGe" id="JDD-1k-m2q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,21 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2f-eW-Vxh">
-                    <rect key="frame" x="12" y="430" width="369" height="35"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UuI-0h-MGe">
+                    <rect key="frame" x="12" y="59" width="369" height="793"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="O2f-eW-Vxh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="1LI-5d-jkO"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="O2f-eW-Vxh" secondAttribute="bottom" constant="353" id="Dea-Nb-wCJ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O2f-eW-Vxh" secondAttribute="trailing" constant="12" id="Qs9-YE-OGw"/>
-                <constraint firstItem="O2f-eW-Vxh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="371" id="aBb-Rz-PAs"/>
+                <constraint firstItem="UuI-0h-MGe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Kru-6z-8j1"/>
+                <constraint firstItem="UuI-0h-MGe" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="Phv-8F-092"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UuI-0h-MGe" secondAttribute="trailing" constant="12" id="fVu-VA-XiF"/>
+                <constraint firstItem="UuI-0h-MGe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="wlK-Gg-UPJ"/>
             </constraints>
-            <point key="canvasLocation" x="53" y="0.0"/>
+            <point key="canvasLocation" x="-495.41984732824426" y="-99.295774647887328"/>
         </view>
     </objects>
     <resources>

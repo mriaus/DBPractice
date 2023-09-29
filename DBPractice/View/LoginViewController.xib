@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DBPractice" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImage" destination="iqI-nz-Erc" id="MCU-WO-bo0"/>
                 <outlet property="passwordTextField" destination="atd-cX-61j" id="fNz-hH-agH"/>
                 <outlet property="usernameTextField" destination="Cmf-0y-o5n" id="jep-Ia-v4H"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,6 +21,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqI-nz-Erc">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="863"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="AaW-Qx-a7N">
                     <rect key="frame" x="12" y="318" width="369" height="216"/>
                     <subviews>
@@ -50,7 +54,7 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Qi8-bm-KPr"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Entrar"/>
                             <connections>
                                 <action selector="onPressLogin:" destination="-1" eventType="touchUpInside" id="uSO-2a-oLZ"/>
                             </connections>
@@ -61,11 +65,16 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="iqI-nz-Erc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5W0-d8-0Ym"/>
                 <constraint firstItem="AaW-Qx-a7N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="FeY-pV-XB9"/>
+                <constraint firstItem="iqI-nz-Erc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="45" id="OYV-kF-xwd"/>
+                <constraint firstItem="iqI-nz-Erc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XOe-FW-mrf"/>
+                <constraint firstItem="iqI-nz-Erc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aG7-Dt-yZm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AaW-Qx-a7N" secondAttribute="trailing" constant="12" id="aHV-d1-ELp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iqI-nz-Erc" secondAttribute="trailing" id="tvg-Kw-R9u"/>
                 <constraint firstItem="AaW-Qx-a7N" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wnW-ng-nKw"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="-11"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>

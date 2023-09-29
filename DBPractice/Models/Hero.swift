@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct Hero: Decodable {
+struct Hero: Decodable, TableViewRepresentable {
+    
     let id: String
     let name: String
     let description: String
     let photo: URL
-    let favorite: Bool
+    let favorite: Bool?
 }
 
 // Haciendo el encode a mano (Hay que quitar el Decodable de arriba)
