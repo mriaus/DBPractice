@@ -25,23 +25,23 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="863"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="AaW-Qx-a7N">
-                    <rect key="frame" x="12" y="318" width="369" height="216"/>
+                    <rect key="frame" x="12" y="440" width="369" height="200"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Anj-S6-i6x">
-                            <rect key="frame" x="0.0" y="0.0" width="369" height="140"/>
+                            <rect key="frame" x="0.0" y="0.0" width="369" height="124"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mail@mail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-0y-o5n" userLabel="Username Text Field">
-                                    <rect key="frame" x="0.0" y="0.0" width="369" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="369" height="56"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="64" id="xIZ-WC-by1"/>
+                                        <constraint firstAttribute="height" constant="56" id="xIZ-WC-by1"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" textContentType="email"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="**********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atd-cX-61j" userLabel="Password  Text Field">
-                                    <rect key="frame" x="0.0" y="76" width="369" height="64"/>
+                                    <rect key="frame" x="0.0" y="68" width="369" height="56"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="64" id="L2q-tv-qIr"/>
+                                        <constraint firstAttribute="height" constant="56" id="L2q-tv-qIr"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -49,12 +49,16 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwQ-ah-ht6">
-                            <rect key="frame" x="0.0" y="172" width="369" height="44"/>
+                            <rect key="frame" x="0.0" y="156" width="369" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Qi8-bm-KPr"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Entrar"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Entrar" cornerStyle="dynamic">
+                                <backgroundConfiguration key="background">
+                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                </backgroundConfiguration>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="onPressLogin:" destination="-1" eventType="touchUpInside" id="uSO-2a-oLZ"/>
                             </connections>
@@ -72,7 +76,7 @@
                 <constraint firstItem="iqI-nz-Erc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aG7-Dt-yZm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AaW-Qx-a7N" secondAttribute="trailing" constant="12" id="aHV-d1-ELp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iqI-nz-Erc" secondAttribute="trailing" id="tvg-Kw-R9u"/>
-                <constraint firstItem="AaW-Qx-a7N" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="wnW-ng-nKw"/>
+                <constraint firstItem="AaW-Qx-a7N" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="114" id="wnW-ng-nKw"/>
             </constraints>
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
@@ -80,6 +84,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

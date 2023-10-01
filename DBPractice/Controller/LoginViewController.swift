@@ -46,6 +46,11 @@ class LoginViewController: UIViewController {
                         }
                                   
                     case let .failure(error):
+//                        Tryiting to show a toast to show a login error
+//                        let alertController = UIAlertController(title: nil,   message: "Error", preferredStyle: .alert)
+                        
+//                        alertController.show(, sender: nil)
+                        
                         print("Error getting heroes \(error)")
                     }
                     
