@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DBPractice" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundImage" destination="iqI-nz-Erc" id="MCU-WO-bo0"/>
+                <outlet property="errorLabel" destination="ZvM-Xk-9jA" id="iJr-XM-N2g"/>
                 <outlet property="passwordTextField" destination="atd-cX-61j" id="fNz-hH-agH"/>
                 <outlet property="usernameTextField" destination="Cmf-0y-o5n" id="jep-Ia-v4H"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -25,7 +26,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="863"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="AaW-Qx-a7N">
-                    <rect key="frame" x="12" y="440" width="369" height="200"/>
+                    <rect key="frame" x="12" y="413.99999999999994" width="369" height="252.33333333333331"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Anj-S6-i6x">
                             <rect key="frame" x="0.0" y="0.0" width="369" height="124"/>
@@ -63,6 +64,14 @@
                                 <action selector="onPressLogin:" destination="-1" eventType="touchUpInside" id="uSO-2a-oLZ"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvM-Xk-9jA">
+                            <rect key="frame" x="0.0" y="232" width="369" height="20.333333333333343"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                        </label>
                     </subviews>
                 </stackView>
             </subviews>
@@ -87,6 +96,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

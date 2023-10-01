@@ -15,14 +15,18 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var backgroundImage: UIImageView!
     
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let image = UIImage(named: "background")
         backgroundImage.image = image
+        self.errorLabel.text = "olalalalalaalala"
+        self.errorLabel.isHidden = true
     }
     
    
+    
     
     @IBAction func onPressLogin(_ sender: UIButton) {
         
@@ -46,16 +50,27 @@ class LoginViewController: UIViewController {
                         }
                                   
                     case let .failure(error):
-//                        Tryiting to show a toast to show a login error
-//                        let alertController = UIAlertController(title: nil,   message: "Error", preferredStyle: .alert)
-                        
-//                        alertController.show(, sender: nil)
-                        
+
+                        DispatchQueue.main.async{
+                            
+                            self?.errorLabel.text = "Error al intentar cargar los personajes"
+                            self?.errorLabel.isHidden = false
+                        }
                         print("Error getting heroes \(error)")
                     }
                     
                 }
             case let .failure(error):
+                //                        Tryiting to show a toast to show a login error
+                //                        let alertController = UIAlertController(title: nil,   message: "Error", preferredStyle: .alert)
+                                        
+                //                        alertController.show(, sender: nil)
+                                        
+                DispatchQueue.main.async{
+                    self?.errorLabel.text = "Error al intentar iniciar sesión"
+                    self?.errorLabel.isHidden = false
+                }
+                
                 print("Error login: \(error)")
             }
         }
