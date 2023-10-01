@@ -19,10 +19,11 @@ class DetailViewController: UIViewController {
     private let character: TableViewRepresentable
     private let transformations: [TableViewRepresentable]
     
-    init(character: TableViewRepresentable, transformations: [TableViewRepresentable]) {
+    init(character: TableViewRepresentable, transformations: [TableViewRepresentable], title: String) {
         self.character = character
         self.transformations = transformations
         super.init(nibName: nil, bundle: nil)
+        self.title = title
     }
     
     // MARK: Block the enter in that method from all the versions (* All the versions ) to (unavailable)
@@ -44,7 +45,7 @@ class DetailViewController: UIViewController {
 
 
     @IBAction func onPressTransformations(_ sender: UIButton) {
-       let listViewViewController = ListViewViewController(characters: transformations )
+        let listViewViewController = ListViewViewController(characters: transformations, title: "Tansformaciones \(characterNameLabel.text ?? "")" )
 //     Push the second view controller onto the navigation stack
         DispatchQueue.main.async {
             self.navigationController?.show(listViewViewController, sender: nil)

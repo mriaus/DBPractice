@@ -26,30 +26,23 @@ class LoginViewController: UIViewController {
     
     @IBAction func onPressLogin(_ sender: UIButton) {
         
-        
-
-        
        let model = NetworkModel()
-
         model.login(
             user: usernameTextField.text ?? "",
             password: passwordTextField.text ?? ""
         ){
-            result in
+            [weak self ] result in
             switch result {
-            case let .success(token):
-                print("Token: \(token)")
+                //Removed the token from succes because we get it form localStorage
+            case .success(_):
                 model.getHeroes {
                     result in
                     switch result {
                     case let .success(characters):
-                        
-                        
                         // Push the second view controller onto the navigation stack
-                     
                               DispatchQueue.main.async {
-                            let listViewViewController = ListViewViewController(characters: characters)
-                            self.navigationController?.setViewControllers([listViewViewController], animated: true)
+                            let listViewViewController = ListViewViewController(characters: characters, title: "Personajes")
+                                  self?.navigationController?.setViewControllers([listViewViewController], animated: true)
                         }
                                   
                     case let .failure(error):

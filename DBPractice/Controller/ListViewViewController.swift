@@ -14,12 +14,11 @@ class ListViewViewController: UIViewController {
     
     private let characters: [TableViewRepresentable]
     
-    init(characters: [TableViewRepresentable]) {
+    init(characters: [TableViewRepresentable], title: String) {
         self.characters = characters
       //  self.characters = characters.sorted(by: { $0.name < $1.name})
-//      DispatchQueue.main.async {
-          super.init(nibName: nil, bundle: nil)
-//      }
+        super.init(nibName: nil, bundle: nil)
+        self.title = title
     }
     
     @available(*, unavailable)
@@ -38,7 +37,7 @@ class ListViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Personajes"
+//        title = "Personajes"
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -85,7 +84,7 @@ extension ListViewViewController: UITableViewDelegate {
             switch result {
             case let .success(transformations):
                 DispatchQueue.main.async {
-                    let detailViewController = DetailViewController(character: character, transformations: transformations)
+                    let detailViewController = DetailViewController(character: character, transformations: transformations, title: character.name)
                     self.navigationController?.show(detailViewController, sender: nil)
                 }
             case let .failure(error):

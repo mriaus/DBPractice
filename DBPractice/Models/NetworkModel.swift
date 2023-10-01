@@ -22,6 +22,14 @@ final class NetworkModel {
             
         }
     }
+    
+    private let session: URLSession
+    init(session: URLSession = .shared){
+        self.session = session
+        
+    }
+    
+    
     private var baseComponents: URLComponents {
         var components = URLComponents()
         components.scheme = "https"
@@ -66,7 +74,7 @@ final class NetworkModel {
         request.httpMethod = "POST"
         request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
         
-        let task = URLSession.shared.dataTask(with: request) {[weak self] data, response, error in
+        let task = session.dataTask(with: request) {[weak self] data, response, error in
             guard error == nil else{
                 //Tal vez cambiarlo
                 completion(.failure(.unknown))
@@ -176,7 +184,7 @@ final class NetworkModel {
         
         
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             guard error == nil else {
                 completion(.failure(.unknown))
                 return
